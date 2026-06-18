@@ -1,0 +1,684 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #101827;
+  background: #eef2f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.72fr);
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.95), rgba(17, 24, 39, 0.96)),
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  color: #fff;
+}
+
+.login-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  max-width: 780px;
+}
+
+.brand-mark,
+.brand span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font-weight: 900;
+}
+
+.login-hero h1 {
+  margin: 28px 0 16px;
+  max-width: 720px;
+  font-size: clamp(46px, 6vw, 84px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.login-hero p {
+  margin: 0;
+  max-width: 620px;
+  color: #d1fae5;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.hero-proof span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  font-weight: 800;
+}
+
+.login-card {
+  align-self: center;
+  margin: 32px;
+  padding: 36px;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
+}
+
+.eyebrow,
+.section-heading span {
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.login-card h2,
+.topbar h1,
+.section-heading h2 {
+  margin: 6px 0 0;
+  letter-spacing: 0;
+}
+
+form,
+label {
+  display: grid;
+  gap: 10px;
+}
+
+form {
+  margin-top: 26px;
+  gap: 18px;
+}
+
+label {
+  color: #374151;
+  font-weight: 800;
+}
+
+.input-shell,
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #64748b;
+}
+
+.input-shell {
+  padding: 0 14px;
+}
+
+.input-shell input,
+.search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+}
+
+.input-shell input {
+  height: 48px;
+}
+
+.primary-button,
+.table-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  background: #111827;
+  color: #fff;
+  font-weight: 900;
+}
+
+.table-button {
+  min-height: 34px;
+  padding: 0 12px;
+  background: #0f766e;
+  font-size: 13px;
+}
+
+.form-error {
+  margin: 0;
+  color: #dc2626;
+  font-weight: 800;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.demo-switcher {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.demo-switcher button {
+  border: 1px solid #d7dde8;
+  border-radius: 8px;
+  padding: 9px;
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 800;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #111827;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.brand span {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #1f2937;
+  color: #fff;
+}
+
+.role-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.role-panel div {
+  display: grid;
+}
+
+.role-panel span {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.workspace {
+  padding: 28px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-box {
+  width: min(360px, 36vw);
+  height: 44px;
+  padding: 0 14px;
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d7dde8;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card,
+.panel {
+  border: 1px solid #d7dde8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+}
+
+.metric-card p,
+.metric-card span {
+  margin: 0;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 28px;
+}
+
+.metric-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.trend {
+  margin-left: auto;
+  color: #94a3b8;
+}
+
+.metric-card.blue .metric-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.metric-card.green .metric-icon {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.metric-card.dark .metric-icon {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.metric-card.orange .metric-icon {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.dashboard-grid,
+.lower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.main-stack,
+.side-stack {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-heading.compact h2 {
+  font-size: 20px;
+}
+
+.table-shell {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 13px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.invoice-id,
+.subscription-meta span,
+.permission-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.status-pill.paid,
+.status-pill.active,
+.status-pill.resolved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.overdue,
+.status-pill.past-due,
+.status-pill.waiting {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.status-pill.open,
+.status-pill.trialing {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.muted {
+  color: #94a3b8;
+  font-weight: 800;
+}
+
+.plan-grid,
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.plan-card,
+.subscription-card,
+.ticket-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.plan-card h3,
+.subscription-card h3,
+.ticket-card h3 {
+  margin: 0;
+}
+
+.plan-card p,
+.subscription-card p,
+.ticket-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.plan-card strong {
+  font-size: 28px;
+}
+
+.plan-card strong span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.feature-list,
+.subscription-list,
+.audit-feed,
+.permission-list {
+  display: grid;
+  gap: 10px;
+}
+
+.feature-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-weight: 800;
+}
+
+.subscription-card {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.subscription-meta {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.audit-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.audit-item p {
+  margin: 0;
+}
+
+.audit-item span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.support-panel {
+  margin-top: 16px;
+}
+
+.loading-state {
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #64748b;
+  font-weight: 900;
+}
+
+@media (max-width: 1180px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .sidebar nav {
+    display: flex;
+    margin: 0;
+  }
+
+  .role-panel {
+    margin-left: auto;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid,
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-hero {
+    padding: 36px 24px 12px;
+  }
+
+  .login-card {
+    margin: 24px;
+  }
+
+  .workspace {
+    padding: 18px;
+  }
+
+  .topbar,
+  .topbar-actions,
+  .sidebar,
+  .sidebar nav,
+  .subscription-card {
+    align-items: stretch;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .metrics-grid,
+  .plan-grid,
+  .ticket-grid,
+  .demo-switcher {
+    grid-template-columns: 1fr;
+  }
+
+  .role-panel {
+    margin-left: 0;
+  }
+
+  .subscription-meta {
+    justify-items: start;
+  }
+}
+
