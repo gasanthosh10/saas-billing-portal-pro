@@ -90,7 +90,4 @@ Open `http://localhost:5173`.
 - `PATCH /api/invoices/:id/pay`
 - `GET /api/audit-logs`
 
-## Submission
-
-Push this folder to GitHub and submit your repository link. You can also deploy the backend to Render/Railway, frontend to Vercel/Netlify, and database to MongoDB Atlas.
 
